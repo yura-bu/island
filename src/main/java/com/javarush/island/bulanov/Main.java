@@ -1,5 +1,6 @@
 package com.javarush.island.bulanov;
 
+import com.javarush.island.bulanov.animals.herbivorous.Horse;
 import com.javarush.island.bulanov.animals.predator.Bear;
 import com.javarush.island.bulanov.animals.predator.Wolf;
 
@@ -7,6 +8,9 @@ public class Main{
     public static void main(String[] args){
         Wolf wolf = new Wolf();
         Bear bear = new Bear();
+        Horse horse = new Horse();
+        System.out.println(horse.getWeight() + " Horse");
+
         System.out.println(bear.getWeight() + " Bear");
         System.out.println(wolf.getWeight());
         wolf.setWeight(wolf.getWeight()-20);
