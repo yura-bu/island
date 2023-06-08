@@ -1,5 +1,5 @@
 package com.javarush.island.bulanov.constants;
-/* вес животных на старте симуляции в граммах */
+/* вес одного животного на старте симуляции в граммах */
 public class WeightAnimalsOnStartSimulation{
     public static final int WEIGHT_WOLF = 50000;
     public static final int WEIGHT_BOA_CONSTRICTOR = 15000;
