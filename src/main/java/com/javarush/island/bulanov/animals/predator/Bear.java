@@ -1,15 +1,34 @@
 package com.javarush.island.bulanov.animals.predator;
 
-import com.javarush.island.bulanov.animals.Animal;
-import com.javarush.island.bulanov.animals.Bio;
 import com.javarush.island.bulanov.animals.Predator;
 import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
 import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
 
-public class Bear extends Animal implements Predator{
-    public static final int foodForFullSaturation = FoodNeedForFullSaturation.FULL_SATURATION_BEAR;
+import java.util.Objects;
+import java.util.UUID;
+
+public class Bear extends Predator{
+
+    public UUID getId(){
+        return id;
+    }
+
+    private final UUID id = UUID.randomUUID();
     public Bear(){
         setWeight(WeightAnimalsOnStartSimulation.WEIGHT_BEAR);
+        setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_BEAR);
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (!(o instanceof Bear bear)) return false;
+        return id == bear.id;
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(id);
     }
 
     @Override
@@ -21,9 +40,5 @@ public class Bear extends Animal implements Predator{
 
     }
 
-    @Override
-    public void toEat(Bio obj){
-
-    }
 
 }

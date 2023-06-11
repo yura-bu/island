@@ -3,13 +3,34 @@ package com.javarush.island.bulanov.animals.predator;
 import com.javarush.island.bulanov.animals.Animal;
 import com.javarush.island.bulanov.animals.Bio;
 import com.javarush.island.bulanov.animals.Predator;
+import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
 import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
 
-public class Eagle extends Animal implements Predator{
-    public Eagle(){
-        setWeight(WeightAnimalsOnStartSimulation.WEIGHT_EAGLE);
+import java.util.Objects;
+import java.util.UUID;
+
+public class Eagle extends  Predator{
+    public UUID getId(){
+        return id;
     }
 
+    private final UUID id = UUID.randomUUID();
+    public Eagle(){
+        setWeight(WeightAnimalsOnStartSimulation.WEIGHT_EAGLE);
+        setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_EAGLE);
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (!(o instanceof Eagle eagle)) return false;
+        return getId() == eagle.getId();
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(getId());
+    }
 
     @Override
     public void multiply(){
@@ -20,11 +41,5 @@ public class Eagle extends Animal implements Predator{
     public void chooseTheDirectionOfMovement(){
 
     }
-
-    @Override
-    public void toEat(Bio obj){
-
-    }
-
 
 }

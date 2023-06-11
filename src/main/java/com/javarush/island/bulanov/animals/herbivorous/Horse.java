@@ -1,15 +1,21 @@
 package com.javarush.island.bulanov.animals.herbivorous;
 
-import com.javarush.island.bulanov.animals.Animal;
-import com.javarush.island.bulanov.animals.Bio;
 import com.javarush.island.bulanov.animals.Herbivorous;
 import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
 import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
 
-public class Horse extends Animal implements Herbivorous{
-    public static final int foodForFullSaturation = FoodNeedForFullSaturation.FULL_SATURATION_HORSE;
+import java.util.Objects;
+import java.util.UUID;
+
+public class Horse extends Herbivorous{
+    public UUID getId(){
+        return id;
+    }
+
+    private final UUID id = UUID.randomUUID();
     public Horse(){
         setWeight(WeightAnimalsOnStartSimulation.WEIGHT_HORSE);
+        setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_HORSE);
     }
 
     @Override
@@ -18,12 +24,20 @@ public class Horse extends Animal implements Herbivorous{
     }
 
     @Override
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (!(o instanceof Horse horse)) return false;
+        return id.equals(horse.id);
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(id);
+    }
+
+    @Override
     public void chooseTheDirectionOfMovement(){
 
     }
 
-    @Override
-    public void toEat(Bio obj){
-
-    }
 }

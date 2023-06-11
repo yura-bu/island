@@ -4,10 +4,29 @@ import com.javarush.island.bulanov.animals.*;
 import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
 import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
 
-public class Wolf extends Animal implements Predator{
+import java.util.Objects;
+import java.util.UUID;
+
+public class Wolf extends Predator{
+    private final UUID id = UUID.randomUUID();
     public Wolf(){
         setWeight(WeightAnimalsOnStartSimulation.WEIGHT_WOLF);
         setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_WOOLF);
+    }
+    public UUID getId(){
+        return id;
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (!(o instanceof Wolf wolf)) return false;
+        return getId() == wolf.getId();
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(getId());
     }
 
     @Override
@@ -20,23 +39,5 @@ public class Wolf extends Animal implements Predator{
 
     }
 
-    @Override
-    public void toEat(Bio obj){
-        if (obj instanceof Plant){
-            System.out.println("Я не ем траву. Я хищник");
-        } else if(obj instanceof Predator) {
-            System.out.println("я не ем хищников - мясо жесткое");
-        }else if ((getFoodForFullSaturation() - obj.getWeight()) > 0){
-            setFoodForFullSaturation(getFoodForFullSaturation() - obj.getWeight());
-            setWeight(getWeight() + obj.getWeight()*10/100);
-            System.out.println("Я еще хочу");
-        }else if (getFoodForFullSaturation() > 0){
-            System.out.println("Я объелся");
-            setWeight(getWeight() + getFoodForFullSaturation()*10/100);
-            setFoodForFullSaturation(0);
-        } else System.out.println("Я не голоден");
-
-
-    }
 
 }
