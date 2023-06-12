@@ -4,6 +4,7 @@ import com.javarush.island.bulanov.animals.Animal;
 import com.javarush.island.bulanov.animals.Bio;
 import com.javarush.island.bulanov.animals.Predator;
 import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
+import com.javarush.island.bulanov.constants.MaxNumberOfAnimalsOnCage;
 import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
 
 import java.util.Objects;
@@ -14,10 +15,12 @@ public class Eagle extends  Predator{
         return id;
     }
 
+
     private final UUID id = UUID.randomUUID();
     public Eagle(){
         setWeight(WeightAnimalsOnStartSimulation.WEIGHT_EAGLE);
         setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_EAGLE);
+        setMaxNumberOfAnimalsOnCage(MaxNumberOfAnimalsOnCage.MAX_ON_CAGE_EAGLE);
     }
 
     @Override
@@ -41,5 +44,10 @@ public class Eagle extends  Predator{
     public void chooseTheDirectionOfMovement(){
 
     }
-
+    @Override
+    public String toString(){
+        return "Eagle{" +
+                "id=" + id +
+                '}';
+    }
 }

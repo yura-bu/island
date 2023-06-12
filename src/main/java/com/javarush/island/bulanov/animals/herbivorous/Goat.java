@@ -3,6 +3,7 @@ package com.javarush.island.bulanov.animals.herbivorous;
 
 import com.javarush.island.bulanov.animals.Herbivorous;
 import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
+import com.javarush.island.bulanov.constants.MaxNumberOfAnimalsOnCage;
 import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
 
 import java.util.Objects;
@@ -18,6 +19,7 @@ public class Goat extends Herbivorous{
     public Goat(){
         setWeight(WeightAnimalsOnStartSimulation.WEIGHT_GOAT);
         setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_GOAT);
+        setMaxNumberOfAnimalsOnCage(MaxNumberOfAnimalsOnCage.MAX_ON_CAGE_GOAT);
     }
 
     @Override

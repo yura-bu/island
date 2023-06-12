@@ -2,7 +2,7 @@ package com.javarush.island.bulanov.animals;
 
 public abstract class Predator extends Animal{
     public  void eat(Bio obj){
-        if (obj instanceof Herbivorous) {
+        if (!(obj instanceof Plant)) {
             if ((getFoodForFullSaturation() - obj.getWeight()) > 0) {
                 setFoodForFullSaturation(getFoodForFullSaturation() - obj.getWeight());
                 setWeight(getWeight() + obj.getWeight() * 10 / 100);

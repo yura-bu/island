@@ -3,6 +3,7 @@ package com.javarush.island.bulanov.animals.predator;
 
 import com.javarush.island.bulanov.animals.Predator;
 import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
+import com.javarush.island.bulanov.constants.MaxNumberOfAnimalsOnCage;
 import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
 
 import java.util.UUID;
@@ -16,6 +17,7 @@ public class BoaConstrictor extends Predator{
     public BoaConstrictor(){
         setWeight(WeightAnimalsOnStartSimulation.WEIGHT_BOA_CONSTRICTOR);
         setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_CONSTRICTOR);
+        setMaxNumberOfAnimalsOnCage(MaxNumberOfAnimalsOnCage.MAX_ON_CAGE_CONSTRICTOR);
     }
 
 
@@ -28,6 +30,13 @@ public class BoaConstrictor extends Predator{
     public void chooseTheDirectionOfMovement(){
 
     }
+    @Override
+    public String toString(){
+        return "BoaConstrictor{" +
+                "id=" + id +
+                '}';
+    }
+
 
 
 }

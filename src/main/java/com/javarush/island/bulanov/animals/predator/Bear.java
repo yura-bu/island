@@ -2,6 +2,7 @@ package com.javarush.island.bulanov.animals.predator;
 
 import com.javarush.island.bulanov.animals.Predator;
 import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
+import com.javarush.island.bulanov.constants.MaxNumberOfAnimalsOnCage;
 import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
 
 import java.util.Objects;
@@ -17,6 +18,7 @@ public class Bear extends Predator{
     public Bear(){
         setWeight(WeightAnimalsOnStartSimulation.WEIGHT_BEAR);
         setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_BEAR);
+        setMaxNumberOfAnimalsOnCage(MaxNumberOfAnimalsOnCage.MAX_ON_CAGE_BEAR);
     }
 
     @Override
@@ -39,6 +41,11 @@ public class Bear extends Predator{
     public void chooseTheDirectionOfMovement(){
 
     }
-
+    @Override
+    public String toString(){
+        return "Bear{" +
+                "id=" + id +
+                '}';
+    }
 
 }
