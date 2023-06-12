@@ -2,7 +2,6 @@ package com.javarush.island.bulanov.animals.herbivorous;
 
 import com.javarush.island.bulanov.animals.Herbivorous;
 import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
-import com.javarush.island.bulanov.constants.MaxNumberOfAnimalsOnCage;
 import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
 
 import java.util.Objects;
@@ -14,10 +13,17 @@ public class WildBoar extends Herbivorous{
     }
 
     private final UUID id = UUID.randomUUID();
+
+    @Override
+    public String toString(){
+        return "WildBoar{" +
+                "id=" + id +
+                '}';
+    }
+
     public WildBoar(){
         setWeight(WeightAnimalsOnStartSimulation.WEIGHT_WILD_BOAR);
         setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_WILD_BOAR);
-        setMaxNumberOfAnimalsOnCage(MaxNumberOfAnimalsOnCage.MAX_ON_CAGE_WILD_BOAR);
     }
 
     @Override

@@ -5,7 +5,6 @@ import com.javarush.island.bulanov.animals.Bio;
 import com.javarush.island.bulanov.animals.Herbivorous;
 import com.javarush.island.bulanov.animals.Plant;
 import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
-import com.javarush.island.bulanov.constants.MaxNumberOfAnimalsOnCage;
 import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
 
 import java.util.Objects;
@@ -16,11 +15,17 @@ public class Duck extends Herbivorous{
         return id;
     }
 
+    @Override
+    public String toString(){
+        return "Duck{" +
+                "id=" + id +
+                '}';
+    }
+
     private final UUID id = UUID.randomUUID();
     public Duck(){
         setWeight(WeightAnimalsOnStartSimulation.WEIGHT_DUCK);
         setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_DUCK);
-        setMaxNumberOfAnimalsOnCage(MaxNumberOfAnimalsOnCage.MAX_ON_CAGE_DUCK);
     }
 
     @Override

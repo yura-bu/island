@@ -3,7 +3,6 @@ package com.javarush.island.bulanov.animals.herbivorous;
 
 import com.javarush.island.bulanov.animals.Herbivorous;
 import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
-import com.javarush.island.bulanov.constants.MaxNumberOfAnimalsOnCage;
 import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
 
 import java.util.Objects;
@@ -18,7 +17,13 @@ public class Rabbit extends Herbivorous{
     public Rabbit(){
         setWeight(WeightAnimalsOnStartSimulation.WEIGHT_RABBIT);
         setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_RABBIT);
-        setMaxNumberOfAnimalsOnCage(MaxNumberOfAnimalsOnCage.MAX_ON_CAGE_RABBIT);
+    }
+
+    @Override
+    public String toString(){
+        return "Rabbit{" +
+                "id=" + id +
+                '}';
     }
 
     @Override

@@ -1,10 +1,7 @@
 package com.javarush.island.bulanov.animals.predator;
 
-import com.javarush.island.bulanov.animals.Animal;
-import com.javarush.island.bulanov.animals.Bio;
 import com.javarush.island.bulanov.animals.Predator;
 import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
-import com.javarush.island.bulanov.constants.MaxNumberOfAnimalsOnCage;
 import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
 
 import java.util.Objects;
@@ -20,7 +17,6 @@ public class Eagle extends  Predator{
     public Eagle(){
         setWeight(WeightAnimalsOnStartSimulation.WEIGHT_EAGLE);
         setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_EAGLE);
-        setMaxNumberOfAnimalsOnCage(MaxNumberOfAnimalsOnCage.MAX_ON_CAGE_EAGLE);
     }
 
     @Override

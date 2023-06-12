@@ -2,7 +2,6 @@ package com.javarush.island.bulanov.animals.predator;
 
 import com.javarush.island.bulanov.animals.Predator;
 import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
-import com.javarush.island.bulanov.constants.MaxNumberOfAnimalsOnCage;
 import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
 
 import java.util.Objects;
@@ -18,7 +17,6 @@ public class Fox extends Predator{
     public Fox(){
         setWeight(WeightAnimalsOnStartSimulation.WEIGHT_FOX);
         setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_FOX);
-        setMaxNumberOfAnimalsOnCage(MaxNumberOfAnimalsOnCage.MAX_ON_CAGE_FOX);
     }
 
     @Override

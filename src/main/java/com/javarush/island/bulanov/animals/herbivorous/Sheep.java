@@ -2,7 +2,6 @@ package com.javarush.island.bulanov.animals.herbivorous;
 
 import com.javarush.island.bulanov.animals.Herbivorous;
 import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
-import com.javarush.island.bulanov.constants.MaxNumberOfAnimalsOnCage;
 import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
 import java.util.Objects;
 import java.util.UUID;
@@ -13,10 +12,17 @@ public class Sheep extends Herbivorous{
     }
 
     private final UUID id = UUID.randomUUID();
+
+    @Override
+    public String toString(){
+        return "Sheep{" +
+                "id=" + id +
+                '}';
+    }
+
     public Sheep(){
         setWeight(WeightAnimalsOnStartSimulation.WEIGHT_SHEEP);
         setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_SHEEP);
-        setMaxNumberOfAnimalsOnCage(MaxNumberOfAnimalsOnCage.MAX_ON_CAGE_SHEEP);
     }
 
     @Override

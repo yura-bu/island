@@ -2,7 +2,6 @@ package com.javarush.island.bulanov.animals.predator;
 
 import com.javarush.island.bulanov.animals.*;
 import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
-import com.javarush.island.bulanov.constants.MaxNumberOfAnimalsOnCage;
 import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
 
 import java.util.Objects;
@@ -15,7 +14,6 @@ public class Wolf extends Predator{
     public Wolf(){
         setWeight(WeightAnimalsOnStartSimulation.WEIGHT_WOLF);
         setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_WOOLF);
-        setMaxNumberOfAnimalsOnCage(MaxNumberOfAnimalsOnCage.MAX_ON_CAGE_WOOLF);
     }
     public UUID getId(){
         return id;
