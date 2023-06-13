@@ -1,6 +1,5 @@
 package com.javarush.island.bulanov.animals;
 
-import com.javarush.island.bulanov.constants.MaxNumberOfAnimalsOnCage;
 
 public abstract class Animal extends Bio{
 

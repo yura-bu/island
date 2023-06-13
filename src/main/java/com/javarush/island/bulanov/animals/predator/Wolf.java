@@ -9,8 +9,6 @@ import java.util.UUID;
 
 public class Wolf extends Predator{
     private final UUID id = UUID.randomUUID();
-
-
     public Wolf(){
         setWeight(WeightAnimalsOnStartSimulation.WEIGHT_WOLF);
         setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_WOOLF);

@@ -7,7 +7,8 @@ import com.javarush.island.bulanov.animals.predator.*;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
-
+/* с какой вероятностью животное съедает "пищу", если они находятся на одной клетке
+ */
 public class ProbabilityOfEating{
     public static final Map<Type, Map<Type, Integer>> probability = new HashMap<>(){{
         put(Wolf.class, new HashMap<>(){{

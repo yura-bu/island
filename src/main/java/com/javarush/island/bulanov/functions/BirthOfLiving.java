@@ -3,6 +3,7 @@ package com.javarush.island.bulanov.functions;
 import com.javarush.island.bulanov.animals.Bio;
 import com.javarush.island.bulanov.fabric.BioFabric;
 
+import java.lang.reflect.Type;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
