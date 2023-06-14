@@ -1,18 +1,22 @@
 package com.javarush.island.bulanov.animals;
-
+import static com.javarush.island.bulanov.functions.FoodSearch.iAteIt;
 public abstract class Herbivorous extends Animal{
 
-    public void eat(Bio obj){
+    public boolean eat(Bio obj){
+        boolean flag = false;
         if(obj instanceof Plant){
             if ((getFoodForFullSaturation() - obj.getWeight()) > 0) {
                 setFoodForFullSaturation(getFoodForFullSaturation() - obj.getWeight());
                 setWeight(getWeight() + obj.getWeight() * 10 / 100);
-                System.out.println("Я еще хочу");
+                System.out.printf("%s съел %s еще хочу%n", this.getClass().getSimpleName(), obj.getClass().getSimpleName());
+                iAteIt = true;
             } else if (getFoodForFullSaturation() > 0) {
-                System.out.println("Я объелся");
+                System.out.printf("%s съел %s и объелся%n", this.getClass().getSimpleName(), obj.getClass().getSimpleName());
                 setWeight(getWeight() + getFoodForFullSaturation() * 10 / 100);
                 setFoodForFullSaturation(0);
-            } else System.out.println("Я не голоден");
+                iAteIt = true;
+            } else flag = true;
         }
+        return flag;
     }
 }

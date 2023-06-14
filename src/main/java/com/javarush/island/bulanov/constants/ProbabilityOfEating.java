@@ -10,7 +10,7 @@ import java.util.Map;
 /* с какой вероятностью животное съедает "пищу", если они находятся на одной клетке
  */
 public class ProbabilityOfEating{
-    public static final Map<Type, Map<Type, Integer>> probability = new HashMap<>(){{
+    public static final Map<Type, Map<Type, Integer>> probabilityOfEating = new HashMap<>(){{
         put(Wolf.class, new HashMap<>(){{
             put(Wolf.class, 0);
             put(BoaConstrictor.class, 0);

@@ -3,7 +3,7 @@ package com.javarush.island.bulanov.animals;
 
 public abstract class Animal extends Bio{
 
-    public abstract void eat(Bio obj);
+    public abstract boolean eat(Bio obj);
     public int getFoodForFullSaturation(){
         return foodForFullSaturation;
     }
