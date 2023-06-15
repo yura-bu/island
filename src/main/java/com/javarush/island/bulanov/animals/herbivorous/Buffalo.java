@@ -1,9 +1,6 @@
 package com.javarush.island.bulanov.animals.herbivorous;
 
 import com.javarush.island.bulanov.animals.Herbivorous;
-import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
-import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
-
 import java.util.Objects;
 import java.util.UUID;
 
@@ -14,11 +11,6 @@ public class Buffalo extends Herbivorous{
 
 
     private final UUID id = UUID.randomUUID();
-    public Buffalo(){
-        setWeight(WeightAnimalsOnStartSimulation.WEIGHT_BUFFALO);
-        setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_BUFFALO);
-    }
-
     @Override
     public boolean equals(Object o){
         if (this == o) return true;

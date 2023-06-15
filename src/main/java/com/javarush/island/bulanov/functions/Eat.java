@@ -4,7 +4,6 @@ import com.javarush.island.bulanov.animals.Bio;
 import com.javarush.island.bulanov.animals.Plant;
 
 
-
 import static com.javarush.island.bulanov.functions.FoodSearch.*;
 
 import java.lang.reflect.Type;
@@ -21,8 +20,8 @@ public class Eat{
         for(var animalType: cell.keySet()) {
             for (Bio a : cell.get(animalType)) {
                 Iterator<Bio> itr2 = animalAll.iterator();
+                    while (itr2.hasNext() && !flag) {
 
-                    while (itr2.hasNext()) {
                         if (!(a instanceof Plant)) {
                             Bio animal = itr2.next();
                             foodSearch(a, animal);
@@ -32,10 +31,8 @@ public class Eat{
                             }
                         }
                         iAteIt = false;
-                        if (flag) {
-                            break;
-                        }
                     }
+                    flag = false;
 
             }
         }

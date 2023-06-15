@@ -1,9 +1,6 @@
 package com.javarush.island.bulanov.animals.herbivorous;
 
 import com.javarush.island.bulanov.animals.Herbivorous;
-import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
-import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
-
 import java.util.Objects;
 import java.util.UUID;
 
@@ -19,11 +16,6 @@ public class Mouse extends Herbivorous{
         return "Mouse{" +
                 "id=" + id +
                 '}';
-    }
-
-    public Mouse(){
-        setWeight(WeightAnimalsOnStartSimulation.WEIGHT_MOUSE);
-        setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_MOUSE);
     }
 
     @Override

@@ -4,8 +4,6 @@ package com.javarush.island.bulanov.animals.herbivorous;
 import com.javarush.island.bulanov.animals.Bio;
 import com.javarush.island.bulanov.animals.Herbivorous;
 import com.javarush.island.bulanov.animals.Plant;
-import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
-import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
 import static com.javarush.island.bulanov.functions.FoodSearch.iAteIt;
 
 import java.util.Objects;
@@ -24,11 +22,6 @@ public class Duck extends Herbivorous{
     }
 
     private final UUID id = UUID.randomUUID();
-    public Duck(){
-        setWeight(WeightAnimalsOnStartSimulation.WEIGHT_DUCK);
-        setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_DUCK);
-    }
-
     @Override
     public boolean equals(Object o){
         if (this == o) return true;

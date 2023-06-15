@@ -2,9 +2,6 @@ package com.javarush.island.bulanov.animals.herbivorous;
 
 
 import com.javarush.island.bulanov.animals.Herbivorous;
-import com.javarush.island.bulanov.constants.FoodNeedForFullSaturation;
-import com.javarush.island.bulanov.constants.WeightAnimalsOnStartSimulation;
-
 import java.util.Objects;
 import java.util.UUID;
 
@@ -34,11 +31,6 @@ public class Caterpillar extends Herbivorous{
     }
 
     private final UUID id = UUID.randomUUID();
-    public Caterpillar(){
-        setWeight(WeightAnimalsOnStartSimulation.WEIGHT_CATERPILLAR);
-        setFoodForFullSaturation(FoodNeedForFullSaturation.FULL_SATURATION_CATERPILLAR);
-    }
-
     @Override
     public void multiply(){
 
