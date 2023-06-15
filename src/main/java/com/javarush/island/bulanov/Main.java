@@ -16,22 +16,17 @@ public class Main{
         Map<Type, Set<Bio>> cellOne = cell.creatingCell();
         for (var type: TypeSpeedMaxPopulationWeightSaturation.TYPE_SPEED_MAX_POPULATION_WEIGHT_SATURATION.keySet()){
             System.out.println(type.getSimpleName() + " " + cellOne.get(type).size());
-            int i =0;
-            for(var animal: cellOne.get(type)){
-                System.out.printf("%s%d weight %d%n",animal.getClass().getSimpleName(), i++, animal.getWeight() );
+            System.out.printf("%s weight %d%n",type.getSimpleName(), TypeSpeedMaxPopulationWeightSaturation.TYPE_SPEED_MAX_POPULATION_WEIGHT_SATURATION.get(type)[2]);
             }
-        }
-
-
         Eat eat = new Eat();
         eat.eating(cellOne);
 
         for (var type: TypeSpeedMaxPopulationWeightSaturation.TYPE_SPEED_MAX_POPULATION_WEIGHT_SATURATION.keySet()){
             System.out.println(type.getSimpleName() + " " + cellOne.get(type).size());
-//            int i =0;
-//            for(var animal: cellOne.get(type)){
-//                System.out.printf("%s%d weight %d%n",animal.getClass().getSimpleName(), i++, animal.getWeight() );
-//            }
+            int i =0;
+            for(var animal: cellOne.get(type)){
+                System.out.printf("%s%d weight %d%n",animal.getClass().getSimpleName(), i++, animal.getWeight() );
+            }
         }
     }
 }

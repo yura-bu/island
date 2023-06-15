@@ -1,7 +1,9 @@
 package com.javarush.island.bulanov.functions;
 
+import com.javarush.island.bulanov.animals.Animal;
 import com.javarush.island.bulanov.animals.Bio;
 import com.javarush.island.bulanov.animals.Plant;
+import com.javarush.island.bulanov.constants.TypeSpeedMaxPopulationWeightSaturation;
 
 
 import static com.javarush.island.bulanov.functions.FoodSearch.*;
@@ -19,21 +21,27 @@ public class Eat{
         System.out.println(animalAll.size());
         for(var animalType: cell.keySet()) {
             for (Bio a : cell.get(animalType)) {
-                Iterator<Bio> itr2 = animalAll.iterator();
+                if (!(a instanceof Plant)) {
+                    Iterator<Bio> itr2 = animalAll.iterator();
+
                     while (itr2.hasNext() && !flag) {
 
-                        if (!(a instanceof Plant)) {
-                            Bio animal = itr2.next();
-                            foodSearch(a, animal);
-                            if (iAteIt){
-                                cell.get(animal.getClass()).remove(animal);
-                                itr2.remove();
-                            }
+
+                        Bio animal = itr2.next();
+                        foodSearch(a, animal);
+                        if (iAteIt) {
+                            cell.get(animal.getClass()).remove(animal);
+                            itr2.remove();
                         }
+
                         iAteIt = false;
                     }
-                    flag = false;
 
+                    flag = false;
+                    if (((Animal) a).getFoodForFullSaturation() == TypeSpeedMaxPopulationWeightSaturation.TYPE_SPEED_MAX_POPULATION_WEIGHT_SATURATION.get(a.getClass())[3]) {
+                        a.setWeight(a.getWeight() - a.getWeight() * 10 / 100);
+                    }
+                }
             }
         }
         System.out.println(animalAll.size());

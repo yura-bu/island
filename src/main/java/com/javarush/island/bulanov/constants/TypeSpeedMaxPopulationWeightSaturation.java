@@ -24,7 +24,7 @@ public class TypeSpeedMaxPopulationWeightSaturation{
         put(WildBoar.class, new Integer[]{2, 50, 400000, 50000});
         put(Buffalo.class, new Integer[]{3, 10, 700000, 100000});
         put(Duck.class, new Integer[]{4, 200, 1000, 150});
-        put(Caterpillar.class, new Integer[]{0, 1000, 10, 0});
-        put(Plant.class, new Integer[]{0, 200, 1000, 0});
+        put(Caterpillar.class, new Integer[]{0, 1000, 10, 1});
+        put(Plant.class, new Integer[]{0, 1000, 1000, 0});
     }};
 }
