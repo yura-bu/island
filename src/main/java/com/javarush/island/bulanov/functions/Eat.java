@@ -46,4 +46,13 @@ public class Eat{
         }
         System.out.println(animalAll.size());
     }
+
+    public void starvedToDeath(Map<Type, Set<Bio>> cell){
+        for( var animalType: cell.keySet()){
+            var animals = cell.get(animalType);
+            if(!(animals instanceof Plant) ) {
+                animals.removeIf(animal -> animal.getWeight() <= TypeSpeedMaxPopulationWeightSaturation.TYPE_SPEED_MAX_POPULATION_WEIGHT_SATURATION.get(animal.getClass())[2] / 2);
+            }
+        }
+    }
 }

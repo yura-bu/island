@@ -20,6 +20,7 @@ public class Main{
             }
         Eat eat = new Eat();
         eat.eating(cellOne);
+        eat.starvedToDeath(cellOne);
 
         for (var type: TypeSpeedMaxPopulationWeightSaturation.TYPE_SPEED_MAX_POPULATION_WEIGHT_SATURATION.keySet()){
             System.out.println(type.getSimpleName() + " " + cellOne.get(type).size());

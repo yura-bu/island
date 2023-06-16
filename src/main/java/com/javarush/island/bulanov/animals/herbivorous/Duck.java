@@ -46,14 +46,11 @@ public class Duck extends Herbivorous{
 
     @Override
     public boolean eat(Bio obj){
-        boolean flag = false;
         if(obj instanceof Plant || obj instanceof Caterpillar){
             if ((getFoodForFullSaturation() - obj.getWeight()) > 0) {
                 setFoodForFullSaturation(getFoodForFullSaturation() - obj.getWeight());
                 setWeight(getWeight() + obj.getWeight() * 10 / 100);
-                System.out.printf("%s съела %s еще хочу%n", this, obj.getClass().getSimpleName());
             } else {
-                System.out.printf("%s съела %s и объелась%n", this, obj.getClass().getSimpleName());
                 setWeight(getWeight() + getFoodForFullSaturation() * 10 / 100);
                 setFoodForFullSaturation(0);
             }
