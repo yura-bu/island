@@ -4,7 +4,7 @@ package com.javarush.island.bulanov.animals.herbivorous;
 import com.javarush.island.bulanov.animals.Bio;
 import com.javarush.island.bulanov.animals.Herbivorous;
 import com.javarush.island.bulanov.animals.Plant;
-import static com.javarush.island.bulanov.functions.FoodSearch.iAteIt;
+import static com.javarush.island.bulanov.actions.FoodSearch.iAteIt;
 
 import java.util.Objects;
 import java.util.UUID;

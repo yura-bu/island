@@ -1,4 +1,4 @@
-package com.javarush.island.bulanov.functions;
+package com.javarush.island.bulanov.actions;
 
 import com.javarush.island.bulanov.animals.Bio;
 import com.javarush.island.bulanov.fabric.BioFabric;

@@ -1,5 +1,5 @@
 package com.javarush.island.bulanov.animals;
-import static com.javarush.island.bulanov.functions.FoodSearch.iAteIt;
+import static com.javarush.island.bulanov.actions.FoodSearch.iAteIt;
 
 public abstract class Predator extends Animal{
     public  boolean eat(Bio obj){
