@@ -49,7 +49,7 @@ public class Eat {
     }
 
 
-    public void starvedToDeath(Map<Type, Set<Bio>> cell){
+    public static synchronized void starvedToDeath(Map<Class, Set<Bio>> cell){
         for( var animalType: cell.keySet()){
             var animals = cell.get(animalType);
             if(!(animals instanceof Plant) ) {

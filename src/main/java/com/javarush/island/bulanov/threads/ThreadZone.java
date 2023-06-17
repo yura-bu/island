@@ -17,6 +17,7 @@ public class ThreadZone implements Runnable{
 
         for (int j = 0; j < island.getLocations()[i].length; j++) {
             Eat.eating(island.getLocations()[i][j]);
+            Eat.starvedToDeath(island.getLocations()[i][j].cell);
         }
     }
 }
