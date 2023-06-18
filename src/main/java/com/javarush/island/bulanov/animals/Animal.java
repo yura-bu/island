@@ -1,7 +1,7 @@
 package com.javarush.island.bulanov.animals;
 
 
-import com.javarush.island.bulanov.constants.TypeSpeedMaxPopulationWeightSaturation;
+import com.javarush.island.bulanov.constants.TypeSpeedMaxPopulationWeightSaturationMultiply;
 
 public abstract class Animal extends Bio{
 
@@ -14,7 +14,12 @@ public abstract class Animal extends Bio{
         this.foodForFullSaturation = foodForFullSaturation;
     }
 
-    private int foodForFullSaturation = TypeSpeedMaxPopulationWeightSaturation.TYPE_SPEED_MAX_POPULATION_WEIGHT_SATURATION.get(this.getClass())[3];
+    @Override
+    public void multiply(int numberOfOffspring){
+
+    }
+
+    private int foodForFullSaturation = TypeSpeedMaxPopulationWeightSaturationMultiply.TYPE_SPEED_MAX_POPULATION_WEIGHT_SATURATION.get(this.getClass())[3];
     public abstract void chooseTheDirectionOfMovement();
 
 }

@@ -23,10 +23,7 @@ public class Eagle extends  Predator{
         return Objects.hash(getId());
     }
 
-    @Override
-    public void multiply(){
 
-    }
 
     @Override
     public void chooseTheDirectionOfMovement(){

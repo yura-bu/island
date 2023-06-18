@@ -31,10 +31,6 @@ public class Caterpillar extends Herbivorous{
     }
 
     private final UUID id = UUID.randomUUID();
-    @Override
-    public void multiply(){
-
-    }
 
     @Override
     public void chooseTheDirectionOfMovement(){

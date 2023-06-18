@@ -24,10 +24,6 @@ public class Buffalo extends Herbivorous{
     }
 
     @Override
-    public void multiply(){
-    }
-
-    @Override
     public void chooseTheDirectionOfMovement(){
 
     }

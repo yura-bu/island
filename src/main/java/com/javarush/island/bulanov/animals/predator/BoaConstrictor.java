@@ -11,10 +11,7 @@ public class BoaConstrictor extends Predator{
 
     private final UUID id = UUID.randomUUID();
 
-    @Override
-    public void multiply(){
 
-    }
 
     @Override
     public void chooseTheDirectionOfMovement(){

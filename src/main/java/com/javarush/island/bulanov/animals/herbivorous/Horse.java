@@ -18,10 +18,6 @@ public class Horse extends Herbivorous{
                 '}';
     }
 
-    @Override
-    public void multiply(){
-
-    }
 
     @Override
     public boolean equals(Object o){

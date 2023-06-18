@@ -3,10 +3,10 @@ package com.javarush.island.bulanov.actions;
 import com.javarush.island.bulanov.animals.Animal;
 import com.javarush.island.bulanov.animals.Bio;
 import com.javarush.island.bulanov.animals.Plant;
-import com.javarush.island.bulanov.constants.TypeSpeedMaxPopulationWeightSaturation;
+import com.javarush.island.bulanov.constants.TypeSpeedMaxPopulationWeightSaturationMultiply;
 import com.javarush.island.bulanov.map.locations.Cell;
 import static com.javarush.island.bulanov.actions.FoodSearch.*;
-import java.lang.reflect.Type;
+
 import java.util.*;
 import java.util.concurrent.ConcurrentMap;
 
@@ -38,7 +38,7 @@ public class Eat {
                 }
 
                 flag = false;
-                if (((Animal) a).getFoodForFullSaturation() == TypeSpeedMaxPopulationWeightSaturation.TYPE_SPEED_MAX_POPULATION_WEIGHT_SATURATION.get(a.getClass())[3]) {
+                if (((Animal) a).getFoodForFullSaturation() == TypeSpeedMaxPopulationWeightSaturationMultiply.TYPE_SPEED_MAX_POPULATION_WEIGHT_SATURATION.get(a.getClass())[3]) {
                     a.setWeight(a.getWeight() - a.getWeight() * 10 / 100);
                 }
             }
@@ -53,7 +53,7 @@ public class Eat {
         for( var animalType: cell.keySet()){
             var animals = cell.get(animalType);
             if(!(animals instanceof Plant) ) {
-                animals.removeIf(animal -> animal.getWeight() <= TypeSpeedMaxPopulationWeightSaturation.TYPE_SPEED_MAX_POPULATION_WEIGHT_SATURATION.get(animal.getClass())[2] / 2);
+                animals.removeIf(animal -> animal.getWeight() <= TypeSpeedMaxPopulationWeightSaturationMultiply.TYPE_SPEED_MAX_POPULATION_WEIGHT_SATURATION.get(animal.getClass())[2] / 2);
             }
         }
     }

@@ -25,10 +25,6 @@ public class Fox extends Predator{
         return Objects.hash(id);
     }
 
-    @Override
-    public void multiply(){
-
-    }
 
     @Override
     public void chooseTheDirectionOfMovement(){

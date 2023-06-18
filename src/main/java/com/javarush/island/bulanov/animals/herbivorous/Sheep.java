@@ -30,10 +30,7 @@ public class Sheep extends Herbivorous{
         return Objects.hash(id);
     }
 
-    @Override
-    public void multiply(){
 
-    }
 
     @Override
     public void chooseTheDirectionOfMovement(){
