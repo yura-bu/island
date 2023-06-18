@@ -6,12 +6,16 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 
-public class ThreadDay implements Runnable{
+public class Day implements Runnable{
 
-    Island island = Island.getIsland();
-    ViewConsole viewConsole = new ViewConsole(island);
+    Island island;
+    public
+    ViewConsole viewConsole;
 
-
+    public Day(ViewConsole viewConsole, Island island){
+        this.island = island;
+        this.viewConsole = viewConsole;
+    }
     @Override
     public void run(){
         ExecutorService executorService = Executors.newFixedThreadPool(100);

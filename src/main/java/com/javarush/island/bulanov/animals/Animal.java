@@ -14,10 +14,6 @@ public abstract class Animal extends Bio{
         this.foodForFullSaturation = foodForFullSaturation;
     }
 
-    @Override
-    public void multiply(int numberOfOffspring){
-
-    }
 
     private int foodForFullSaturation = TypeSpeedMaxPopulationWeightSaturationMultiply.TYPE_SPEED_MAX_POPULATION_WEIGHT_SATURATION.get(this.getClass())[3];
     public abstract void chooseTheDirectionOfMovement();

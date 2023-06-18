@@ -18,8 +18,4 @@ public class Plant extends Bio{
 
     private final UUID id = UUID.randomUUID();
 
-    @Override
-    public void multiply(int numberOfOffspring){
-
-    }
 }
