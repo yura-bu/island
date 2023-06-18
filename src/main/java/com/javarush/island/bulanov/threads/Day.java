@@ -8,23 +8,23 @@ import java.util.concurrent.Executors;
 
 public class Day implements Runnable{
 
-    Island island;
+    Island island = Island.getIsland();
     public
-    ViewConsole viewConsole;
+    ViewConsole viewConsole = new ViewConsole(island);
 
-    public Day(ViewConsole viewConsole, Island island){
-        this.island = island;
-        this.viewConsole = viewConsole;
-    }
+
     @Override
     public void run(){
-        ExecutorService executorService = Executors.newFixedThreadPool(100);
 
-        for (int i = 0; i < island.getLocations().length; i++) {
-            executorService.execute(new ThreadZone(i));
+        try (ExecutorService executorService = Executors.newFixedThreadPool(100)) {
+
+            for (int i = 0; i < island.getLocations().length; i++) {
+                executorService.execute(new ThreadZone(i));
+            }
+            viewConsole.print();
+
         }
-        viewConsole.print();
-        executorService.shutdownNow();
+
 
     }
 }
