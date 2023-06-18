@@ -12,7 +12,7 @@ public class Main{
 
         ScheduledExecutorService executorService = Executors.newScheduledThreadPool(4);
         executorService.scheduleWithFixedDelay(new ThreadDay(), 1, 1, TimeUnit.SECONDS);
-        Thread.sleep(5000);
+        Thread.sleep(20000);
 
         executorService.shutdownNow();
 

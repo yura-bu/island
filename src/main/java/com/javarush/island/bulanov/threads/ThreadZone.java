@@ -1,6 +1,7 @@
 package com.javarush.island.bulanov.threads;
 
 import com.javarush.island.bulanov.actions.Eat;
+import com.javarush.island.bulanov.actions.Multiply;
 import com.javarush.island.bulanov.map.Island;
 
 
@@ -18,6 +19,7 @@ public class ThreadZone implements Runnable{
         for (int j = 0; j < island.getLocations()[i].length; j++) {
             Eat.eating(island.getLocations()[i][j]);
             Eat.starvedToDeath(island.getLocations()[i][j].cell);
+            Multiply.multiplying(island.getLocations()[i][j]);
         }
     }
 }
