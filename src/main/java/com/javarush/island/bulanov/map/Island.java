@@ -16,7 +16,7 @@ public class Island{
     public Cell[][] getLocations(){
         return locations;
     }
-    private final Cell[][] locations = new Cell[10][10];
+    private final Cell[][] locations = new Cell[20][20];
     private Island(){
         createIsland();
     }
