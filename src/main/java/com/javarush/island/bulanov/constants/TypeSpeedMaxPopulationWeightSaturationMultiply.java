@@ -21,13 +21,13 @@ public class TypeSpeedMaxPopulationWeightSaturationMultiply{
         put(Horse.class, new Integer[]{4, 20, 400000, 60000, 1});
         put(Deer.class, new Integer[]{4, 20, 300000, 50000, 1});
         put(Rabbit.class, new Integer[]{2, 150, 2000, 450, 3});
-        put(Mouse.class, new Integer[]{1,500, 50, 10, 5});
-        put(Goat.class, new Integer[]{3, 140, 60000, 10000, 2});
-        put(Sheep.class, new Integer[]{3, 140, 70000, 15000, 2});
+        put(Mouse.class, new Integer[]{1,250, 50, 10, 5});
+        put(Goat.class, new Integer[]{3, 100, 60000, 10000, 2});
+        put(Sheep.class, new Integer[]{3, 100, 70000, 15000, 2});
         put(WildBoar.class, new Integer[]{2, 50, 400000, 50000, 3});
         put(Buffalo.class, new Integer[]{3, 10, 700000, 100000, 1});
-        put(Duck.class, new Integer[]{4, 200, 1000, 150, 4});
-        put(Caterpillar.class, new Integer[]{0, 1000, 10, 1, 10});
+        put(Duck.class, new Integer[]{4, 100, 1000, 150, 3});
+        put(Caterpillar.class, new Integer[]{0, 500, 10, 1, 5});
         put(Plant.class, new Integer[]{0, 500, 1000, 0, 500});
     }};
 }

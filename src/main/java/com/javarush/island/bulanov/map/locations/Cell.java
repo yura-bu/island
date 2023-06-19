@@ -8,6 +8,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 public class Cell{
     public ConcurrentHashMap<Class, Set<Bio>> cell = new ConcurrentHashMap<>();
+   public ArrayList<Cell> neighbors = new ArrayList<>();
     public Cell(){
         Set<Class> types = TypeSpeedMaxPopulationWeightSaturationMultiply.TYPE_SPEED_MAX_POPULATION_WEIGHT_SATURATION.keySet();
         for (var type : types) {

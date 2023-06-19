@@ -1,13 +1,10 @@
 package com.javarush.island.bulanov.animals.predator;
 
 import com.javarush.island.bulanov.animals.*;
-
-
-
 import java.util.Objects;
 import java.util.UUID;
 
-public class Wolf extends Predator{
+public class Wolf extends Predator implements Moving{
     private final UUID id = UUID.randomUUID();
     public UUID getId(){
         return id;

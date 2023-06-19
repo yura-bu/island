@@ -1,15 +1,12 @@
 package com.javarush.island.bulanov.animals.herbivorous;
 
 
-import com.javarush.island.bulanov.animals.Bio;
-import com.javarush.island.bulanov.animals.Herbivorous;
-import com.javarush.island.bulanov.animals.Plant;
+import com.javarush.island.bulanov.animals.*;
 import static com.javarush.island.bulanov.actions.FoodSearch.iAteIt;
-
 import java.util.Objects;
 import java.util.UUID;
 
-public class Duck extends Herbivorous{
+public class Duck extends Herbivorous implements Moving{
     public UUID getId(){
         return id;
     }

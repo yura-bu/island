@@ -2,10 +2,11 @@ package com.javarush.island.bulanov.animals.herbivorous;
 
 
 import com.javarush.island.bulanov.animals.Herbivorous;
+import com.javarush.island.bulanov.animals.Moving;
 import java.util.Objects;
 import java.util.UUID;
 
-public class Rabbit extends Herbivorous{
+public class Rabbit extends Herbivorous implements Moving{
     public UUID getId(){
         return id;
     }

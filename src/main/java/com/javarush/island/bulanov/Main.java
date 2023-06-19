@@ -10,11 +10,9 @@ public class Main{
     public static void main(String[] args) throws InterruptedException{
 
         try (ScheduledExecutorService executorService = Executors.newScheduledThreadPool(8)) {
-            executorService.scheduleWithFixedDelay(new Day(), 1, 1, TimeUnit.SECONDS);
+            executorService.scheduleWithFixedDelay(new Day(), 100, 100, TimeUnit.MILLISECONDS);
             Thread.sleep(10000);
 
         }
-
-
     }
 }

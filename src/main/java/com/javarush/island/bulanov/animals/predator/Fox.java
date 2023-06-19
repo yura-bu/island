@@ -1,10 +1,11 @@
 package com.javarush.island.bulanov.animals.predator;
 
+import com.javarush.island.bulanov.animals.Moving;
 import com.javarush.island.bulanov.animals.Predator;
 import java.util.Objects;
 import java.util.UUID;
 
-public class Fox extends Predator{
+public class Fox extends Predator implements Moving{
 
     public UUID getId(){
         return id;
